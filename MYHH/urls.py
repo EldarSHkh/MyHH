@@ -33,9 +33,8 @@ urlpatterns = [
 urlpatterns += [
     path('signup/login/', UserLoginView.as_view(), name='login'),
     path('logout/', LogoutView.as_view(), name='logout'),
-    path('signup/', UserSignupView.as_view(), name='signup'),
-    path('api-auth/', include('rest_framework.urls')),
-    url('api/', include('app_vacancies.api.urls'))
+    path('signup/', UserSignupView.as_view(), name='signup')
+
 ]
 
 if settings.DEBUG:

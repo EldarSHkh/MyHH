@@ -1,0 +1,76 @@
+{% extends "base.html" %}
+{% block content %}
+
+  <main class="container mt-3">
+    <section>
+        <h1 class="h1 text-center mx-auto mt-4 py-5"><strong>Вакансии для <br>разработчиков</strong></h1>
+        <div class="row">
+          <div class="col-12 col-md-8 col-lg-6 offset-lg-3 offset-md-2">
+            <form action="{% url 'search' %}" class="form-inline mb-3">
+              <div class="form-group col-8 col-md-10 pl-0">
+                <input class="form-control w-100" type="search"
+                       placeholder="Найти работу или стажировку" aria-label="Найти работу или стажировку" name="s">
+              </div>
+              <div class="form-group col-4 col-md-2 pl-0">
+                <button class="btn btn-primary w-100" type="submit">Найти</button>
+              </div>
+            </form>
+            <p>Например:
+              <a href="{% url 'search' %}?s=Python" class="text-dark border-bottom border-dark m-1 text-decoration-none">
+                Python
+              </a>
+              <a href="{% url 'search' %}?s=Flask" class="text-dark border-bottom border-dark m-1 text-decoration-none">
+                Flask
+              </a>
+              <a href="{% url 'search' %}?s=Django" class="text-dark border-bottom border-dark m-1 text-decoration-none">
+                Django
+              </a>
+              <a href="{% url 'search' %}?s=Парсинг" class="text-dark border-bottom border-dark m-1 text-decoration-none">
+                Парсинг
+              </a>
+              <a href="{% url 'search' %}?s=ML" class="text-dark border-bottom border-dark m-1 text-decoration-none">
+                ML
+              </a>
+            </p>
+          </div>
+        </div>
+  </section>
+
+    <section class="mt-5 pt-3">
+
+      <h2 class="h2 font-weight-normal text-center mb-5">Вакансии по специализациям</h2>
+      <div class="row mb-0">
+          {% for specialty in specialties %}
+              <div class="col-6 col-md-6 col-lg-3">
+                  <div class="card pt-4 text-center mb-4">
+                    <img class="mx-auto d-block" src="{{ specialty.picture.url }}" width="80" height="80" alt="">
+                    <div class="card-body">
+                      <p class="card-text mb-2">{{ specialty.title }}</p>
+                      <p class="card-text"><a href="{% url 'specialization'  specialty.code %}">вакансии: {{ specialty.vacancies_count }}</a></p>
+                    </div>
+                  </div>
+              </div>
+          {% endfor %}
+      </div>
+    </section>
+
+    <section class="my-5 pt-3">
+      <h2 class="h2 font-weight-normal text-center mb-5">Компании</h2>
+      <div class="row mb-0">
+        {% for company in companies %}
+        <div class="col-6 col-md-6 col-lg-3">
+          <div class="card pt-5 text-center mb-4">
+            <a href="{% url 'company' company.pk %}" style="max-width: 150px;" class="mx-auto d-block">
+              <img class="mx-auto d-block" src="{{ company.logo.url }}" width="150" alt="">
+            </a>
+            <div class="card-body">
+              <p class="card-text"><a href="{% url 'company'  company.pk %}">вакансии: {{ company.vacancies_count }}</a></p>
+            </div>
+          </div>
+        </div>
+        {% endfor %}
+      </div>
+    </section>
+  </main>
+
+{% endblock %}

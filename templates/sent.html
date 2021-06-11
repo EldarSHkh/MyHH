@@ -1,0 +1,19 @@
+{% extends "base.html" %}
+{% block content %}
+{% load static %}
+
+  <main class="container mt-3 pb-5">
+    <div class="row mt-5">
+      <div class="col-10 col-md-6 offset-1 offset-md-3 mt-5">
+        <div class="card mb-3">
+          <div class="card-body text-center pt-5">
+            <img src="{% static 'check.png' %}" width="65" alt="">
+            <h2 class="h5 card-title mt-4 mb-2">Отклик отправлен</h2>
+            <p><a href="{% url 'vacancy' vacancy.id %}">Вернуться к вакансии</a></p>
+          </div>
+        </div>
+      </div>
+    </div>
+  </main>
+
+{% endblock %}

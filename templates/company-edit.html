@@ -1,0 +1,26 @@
+{% extends "base.html" %}
+{% load crispy_forms_filters %}
+
+{% block content %}
+  <div class="row mt-5">
+    {% include 'base_user_menu.html' %}
+    <div class="col-12 col-lg-8">
+      <div class="card">
+        <div class="card-body px-4 pb-4">
+          <!-- Tab -->
+          <section class="tab-pane fade show active">
+            <h2 class="h4 pt-2 pb-3">Информация о компании</h2>
+            <form enctype="multipart/form-data" method="post"> {% csrf_token %}
+              {% load crispy_forms_tags %}
+              {{ form|crispy }}
+              <div class="form-group">
+                <input type="submit" class="btn btn-info" value="Сохранить">
+              </div>
+            </form>
+          </section>
+          <!-- END Tab -->
+        </div>
+      </div>
+    </div>
+  </div>
+{% endblock content %}

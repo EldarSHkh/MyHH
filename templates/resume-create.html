@@ -1,0 +1,12 @@
+{% extends "base.html" %}
+
+
+{% block content %}
+  <section class="col-12 col-lg-6 offset-lg-3 mt-5 card">
+    <div class="card-body px-3 pb-4">
+      <h1 class="h4 pt-2">Мое резюме</h1>
+      <p class="mt-2">У вас нет резюме. Хотите создать его?</p>
+      <a href="{% url 'create_resume' %}" class="btn btn-info mb-2">Создать резюме</a>
+    </div>
+  </section>
+{% endblock content %}

@@ -1,0 +1,18 @@
+{% extends "base.html" %}
+{% load crispy_forms_filters %}
+
+
+{% block content %}
+  <section class="col-12 col-lg-6 offset-lg-3 mt-5 card">
+    <div class="card-body px-3 pb-4">
+      <h1 class="h4 pt-2 pb-3">Мое резюме</h1>
+      <form method="post"> {% csrf_token %}
+        {% load crispy_forms_tags %}
+        {{ form|crispy }}
+        <div class="form-group">
+          <input type="submit" class="btn btn-info" value="Сохранить">
+        </div>
+      </form>
+    </div>
+  </section>
+{% endblock content %}

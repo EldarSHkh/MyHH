@@ -1,0 +1,10 @@
+{% extends "base.html" %}
+{% block content %}
+  <section class="col-12 col-lg-6 offset-lg-3 mt-5 card">
+    <div class="card-body px-3 pb-4">
+      <h1 class="h4 pt-2">Моя компания</h1>
+      <p class="mt-2">Пока мы думаем, что вы – частное лицо. Хотите создать карточку компании, разместить информацию и вакансии?</p>
+      <a href="{% url 'create_company' %}" class="btn btn-info mb-2">Создать карточку компании</a>
+    </div>
+  </section>
+{% endblock content %}

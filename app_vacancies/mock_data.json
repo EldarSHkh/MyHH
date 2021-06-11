@@ -1,0 +1,23 @@
+[
+  {"model": "app_vacancies.specialty", "pk": 1, "fields": {"code": "frontend", "title": "Фронтенд"}},
+  {"model": "app_vacancies.specialty", "pk": 2, "fields": {"code": "backend", "title": "Бэкенд"}},
+  {"model": "app_vacancies.specialty", "pk": 3, "fields": {"code": "gamedev", "title": "Геймдев"}},
+  {"model": "app_vacancies.specialty", "pk": 4, "fields": {"code": "devops", "title": "Девопс"}},
+  {"model": "app_vacancies.specialty", "pk": 5, "fields": {"code": "design", "title": "Дизайн"}},
+  {"model": "app_vacancies.specialty", "pk": 6, "fields": {"code": "products", "title": "Продукты"}},
+  {"model": "app_vacancies.specialty", "pk": 7, "fields": {"code": "management", "title": "Менеджмент"}},
+  {"model": "app_vacancies.specialty", "pk": 8, "fields": {"code": "testing", "title": "Тестирование"}},
+  {"model": "app_vacancies.vacancy", "pk": 1, "fields": {"title": "Разработчик на Python", "specialty": 2, "company": 3, "description": "Потом добавим", "salary_min": 100000, "salary_max": 150000, "published_at": "2020-03-11"}},
+  {"model": "app_vacancies.vacancy", "pk": 2, "fields": {"title": "Разработчик в проект на Django", "specialty": 2, "company": 6, "description": "Потом добавим", "salary_min": 80000, "salary_max": 90000, "published_at": "2020-03-11"}},
+  {"model": "app_vacancies.vacancy", "pk": 3, "fields": {"title": "Разработчик на Swift в аутсорс компанию", "specialty": 2, "company": 6, "description": "Потом добавим", "salary_min": 120000, "salary_max": 150000, "published_at": "2020-03-11"}},
+  {"model": "app_vacancies.vacancy", "pk": 4, "fields": {"title": "Мидл программист на Python", "specialty": 2, "company": 1, "description": "Потом добавим", "salary_min": 80000, "salary_max": 90000, "published_at": "2020-03-11"}},
+  {"model": "app_vacancies.vacancy", "pk": 5, "fields": {"title": "Питонист в стартап", "specialty": 2, "company": 8, "description": "Потом добавим", "salary_min": 120000, "salary_max": 150000, "published_at": "2020-03-11"}},
+  {"model": "app_vacancies.company", "pk": 1, "fields": {"name": "workiro", "employee_count": 0}},
+  {"model": "app_vacancies.company", "pk": 2, "fields": {"name": "rebelrage", "employee_count": 0}},
+  {"model": "app_vacancies.company", "pk": 3, "fields": {"name": "staffingsmarter", "employee_count": 0}},
+  {"model": "app_vacancies.company", "pk": 4, "fields": {"name": "evilthreath", "employee_count": 0}},
+  {"model": "app_vacancies.company", "pk": 5, "fields": {"name": "hirey", "employee_count": 0}},
+  {"model": "app_vacancies.company", "pk": 6, "fields": {"name": "swiftattack", "employee_count": 0}},
+  {"model": "app_vacancies.company", "pk": 7, "fields": {"name": "troller", "employee_count": 0}},
+  {"model": "app_vacancies.company", "pk": 8, "fields": {"name": "primalassault", "employee_count": 0}}
+]
